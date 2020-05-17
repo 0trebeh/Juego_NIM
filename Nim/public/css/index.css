@@ -1,0 +1,67 @@
+html, body {
+	height:100vh;
+	background: #000;
+	display: flex;
+    flex-direction: column;
+}
+
+.img {
+	background-image: url('../img/fosforo.png');
+	background-color: #282828; 
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	flex: 1;
+}
+
+.dark {
+	background: #282828;
+}
+
+.display {
+	display: none;
+}
+
+.btn {
+	color: black;
+	width: 80%;
+	background: #daa520;
+}
+
+.btn:hover {
+	color: white;
+	width: 77%;
+	background: #b1871b;
+}
+
+.nbtn {
+	color: black;
+	width: 100%;
+	background: #daa520;
+}
+
+.nbtn:hover {
+	color: white;
+	width: 97%;
+	background: #b1871b;
+}
+
+.a:hover {
+	color: black;
+}
+
+.hover {
+	cursor: pointer;
+}
+
+.hover:hover {
+	color: black;
+}
+
+.style{
+	cursor: hand; 
+	cursor: pointer; 
+	color: blue; 
+	text-decoration:underline;
+}

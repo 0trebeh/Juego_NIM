@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./public/img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./public/css/index.css">
+    <title> NIM </title>
+    <meta name="Autor: Heberto Urribarri">
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top dark">
+      <a class="navbar-brand hover" id="click_home"> Home NIM </a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle hover" data-toggle="dropdown">Variantes</a>
+            <div class="dropdown-menu dark">
+              <button type="submit" class="btn nbtn mt-1" id="click_play" onclick="back();">NIM</button>
+              <button type="submit" class="btn nbtn mt-1" id="play_v" onclick="start_variant();">Variante Simple</button>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active hover mr-2" id="click_rules">Reglas del Juego</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- Home -->
+    <div id="home" class="img">
+      <div class="col-md-5 mx-auto pt-5">
+        <div class="card card-body mt-5 dark">
+          <button type="submit" class="btn mx-auto p-2" id="click_play_n" onclick="back();"> Jugar NIM </button>
+          <button type="submit" class="btn mx-auto mt-2 mb-2" id="click_play_v" onclick="start_variant();"> Jugar Variante Simple </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Game Nim -->
+    <div id="play" class="display">
+      <div class="col-md-5 mx-auto pt-5">
+        <div id="op1" class="card card-body mt-5 dark">
+          <button type="submit" class="btn nbtn mx-auto p-2" onclick="pvc();"> Humano vs Programa </button>
+          <button type="submit" class="btn nbtn mx-auto mt-2 mb-2" onclick="pvp();"> Humano vs Humano </button>
+        </div>
+      </div>
+      <div id="op2" class="col-md-8 mx-auto mb-3 display">
+        <div><span id="game"></span><p id="text_"><span id="player"></span></p></div>
+      </div>
+      <img id="bom" src="./public/img/bom.png">
+    </div>
+
+
+    <!-- Game simple variant -->
+    <div id="play_variant" class="col-md mt-5 pt-5 display">
+      <div class="mt-5 pt-5"><span id="game_v"></span><p id="text_v"><span id="player_v"></span></p></div>
+    </div>
+
+
+    <!-- show rules -->
+    <div id="rules" class="col-md-8 mx-auto mt-5 pt-3 display">
+      <h1 class="text-white">Reglas del NIM</h1>
+      <div class="card card-body mt-3 dark">
+        <p class="text-white">Nim es un juego para dos jugadores que utiliza fichas idénticas alineadas en columnas. Los jugadores van alternándose en sus jugadas. Una jugada consta de retirar las fichas de una sola columna; el jugador que hace la jugada decide el número de fichas retiradas.</p>
+        <p class="text-white">Para hacer una jugada, pasa el puntero del ratón por encima de las fichas; haga clic cuando quieres retirar las fichas apagadas. El partido acaba cuando no quedan fichas disponibles. Gana el jugador que realizó la ultima jugada. ¡Buena suerte!</p>
+      </div>
+
+      <div class="card card-body mt-3 dark">
+        <h2 class="text-white">Variante Simple</h2>
+        <p class="text-white mt-2">En esta variante se presentan 11 fichas. Cada jugador retira, en su turno una, dos ó tres fichas del monton. Gana el juego el que consiga llevarse la última ficha. </p>
+      </div>
+    </div>
+    
+
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./game/nim.js"></script>
+    <script type="text/javascript" src="./game/simple_variant.js"></script>
+    <script type="text/javascript" src="./public/js/jquery.js"></script>
+    <script type="text/javascript" src="./public/js/bootstrap.min.js"></script>
+  </body>
+</html>
